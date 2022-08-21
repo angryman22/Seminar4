@@ -96,16 +96,16 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-Console.WriteLine("Введите первое число: ");
-int numberA = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите второе число: ");
-int numberB = Convert.ToInt32(Console.ReadLine());
-int result = numberA;
-for (int i = 1; i < numberB; i++)
-{
-    result *= numberA;
-}
-Console.WriteLine("Число " + numberA + " в степени " + numberB + " равно " + result);
+// Console.WriteLine("Введите первое число: ");
+// int numberA = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите второе число: ");
+// int numberB = Convert.ToInt32(Console.ReadLine());
+// int result = numberA;
+// for (int i = 1; i < numberB; i++)
+// {
+//     result *= numberA;
+// }
+// Console.WriteLine("Число " + numberA + " в степени " + numberB + " равно " + result);
 
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 // 452 -> 11
@@ -115,26 +115,24 @@ Console.WriteLine("Число " + numberA + " в степени " + numberB + " 
 Console.WriteLine("Введите число: ");
 string number = Console.ReadLine();
 int numLength = 0;
+int result = 0;
 int res = Convert.ToInt32(number);
 while (res != 0)
 {
+    int ost = res %10;
+    result += ost;
     res = res / 10;
-    numLength++;
 }
-int result = 0;
-for (int i = 0; i < numLength; i++)
-{
-    result += Convert.ToInt32(number[i]);
-}
+
 Console.WriteLine("Сумма цифр в числе " + number + " равна " + result);
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
-int[] nums = new int[8];
-for (int i = 0; i < 8; i++)
-{
-    nums [i] = new Random().Next();
-    Console.Write($"{nums [i]} ");
-}
+// int[] nums = new int[8];
+// for (int i = 0; i < 8; i++)
+// {
+//     nums [i] = new Random().Next();
+//     Console.Write($"{nums [i]} ");
+// }
